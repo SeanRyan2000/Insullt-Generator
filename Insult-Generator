@@ -1,0 +1,20 @@
+from random import choice
+def printInsult (username,age):
+
+    adjectives = ["wet", "big", "fat", "evil", "rude", "smelly"] //change these to any adjectives you like
+    nouns = ["turnip", "dog", "fool", "bottle", "tatletale", "ass"] // change these to any nouns you like
+    if (age < 16):
+        ageAdjective = "young "
+    else:
+        ageAdjective = "old " 
+
+    print (username + ", You are a " + ageAdjective + choice(adjectives) +
+           " " + choice(nouns))
+
+
+def continuousInsults(username, age):
+
+    userAnswer=""
+    while (userAnswer != "no"):
+        printInsult(username, age)
+        userAnswer = input("can you take anymore?")
